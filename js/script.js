@@ -6,7 +6,7 @@ let movies =
 					title: 'Avengers',
 					genre: 'Action',
 					releasedDate: Date(2012,3,11),
-					rating: 4.5
+					rating: 3.5
 
 				},
 
@@ -24,7 +24,7 @@ let movies =
 					title: 'Thor',
 					genre: 'Action-Adventure',
 					releasedDate: Date(2011,4,6),
-					rating: 4.1
+					rating: 2.1
 				},
 
 			
@@ -33,7 +33,7 @@ let movies =
 					title: 'Ironman',
 					genre: 'Action-Adventure',
 					releasedDate: Date(2008,4,2),
-					rating: 4.6
+					rating: 3.6
 				},
 
  
@@ -42,7 +42,7 @@ let movies =
 					title: 'Captain America: The First Avenger',
 					genre: 'Action-Adventure',
 					releasedDate: Date(2011,6,22),
-					rating: 4.8
+					rating: 5.8
 				},
 
 			]
@@ -67,6 +67,21 @@ const selectStart = (param) => {
 		console.log(`${title} is a/an  ${genre} movie`)
 	}
 
+}
+
+const showTitles = (x) => {
+	let isSatisfied = false
+	for(let i=0; i<movies.length; i++){
+		let {title,rating} = movies[i];
+		if(rating >= x) {
+			console.log(`${title} ${rating} stars`)
+			isSatisfied = true
+		} 
+		
+	}
+	if(!isSatisfied){
+		console.log(`No movies with that rating`)
+	}
 }
 
 
