@@ -73,7 +73,7 @@ const showTitles = (x) => {
 	let isSatisfied = false
 	for(let i=0; i<movies.length; i++){
 		let {title,rating} = movies[i];
-		if(rating >= x && rating<= x+1) {
+		if(rating >= x) {
 			console.log(`${title} ${rating} stars`)
 			isSatisfied = true
 		} 
